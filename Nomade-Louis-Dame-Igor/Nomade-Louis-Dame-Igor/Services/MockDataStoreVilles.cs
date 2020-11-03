@@ -7,29 +7,29 @@ using Nomade_Louis_Dame_Igor.Models;
 namespace Nomade_Louis_Dame_Igor.Services
 {
    
-    public class MockDataStoreVilles : IDataStore<Villes>
+    public class MockDataStoreVilles : IDataStoreVilles<Villes>
     {
-        public Task<bool> AddItemAsync(Villes item)
+        public Task<bool> AddVillesAsync(Villes Villes)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteItemAsync(string id)
+        public Task<bool> DeleteVillesAsync(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Villes> GetItemAsync(string id)
+        public Task<Villes> GetVillesAsync(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Villes>> GetItemsAsync(bool forceRefresh = false)
+        public Task<IEnumerable<Villes>> GetVillesAsync(bool forceRefresh = false)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateItemAsync(Villes item)
+        public Task<bool> UpdateVillesAsync(Villes Villes)
         {
             throw new NotImplementedException();
         }

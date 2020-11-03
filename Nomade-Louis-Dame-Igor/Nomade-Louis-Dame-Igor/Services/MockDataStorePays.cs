@@ -6,29 +6,29 @@ using System.Threading.Tasks;
 
 namespace Nomade_Louis_Dame_Igor.Services
 {
-    class MockDataStorePays : IDataStore<Pays>
+    class MockDataStorePays : IDataStorePays<Pays>
     {
-        public Task<bool> AddItemAsync(Pays item)
+        public Task<bool> AddPaysAsync(Pays Pays)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> DeleteItemAsync(string id)
+        public Task<bool> DeletePaysAsync(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<Pays> GetItemAsync(string id)
+        public Task<Pays> GetPaysAsync(string id)
         {
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Pays>> GetItemsAsync(bool forceRefresh = false)
+        public Task<IEnumerable<Pays>> GetPayssAsync(bool forceRefresh = false)
         {
             throw new NotImplementedException();
         }
 
-        public Task<bool> UpdateItemAsync(Pays item)
+        public Task<bool> UpdatePaysAsync(Pays Pays)
         {
             throw new NotImplementedException();
         }
