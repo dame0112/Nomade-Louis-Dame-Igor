@@ -1,0 +1,48 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Nomade_Louis_Dame_Igor.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:Nomade_Louis_Dame_Igor.ViewModels"  
+             xmlns:model="clr-namespace:Nomade_Louis_Dame_Igor.Models"  
+             x:Name="BrowseVillesPage">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Command="{Binding AddVillesCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    <RefreshView x:DataType="local:VillesViewModel" Command="{Binding LoadVillesCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="VillesListView"
+                ItemsSource="{Binding Villes}"
+                SelectionMode="None">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Villes">
+                        <Label Text="{Binding Id}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListVillesTextStyle}" 
+                            FontSize="16" />
+                        <Label Text="{Binding Nom}" 
+                            LineBreakMode="NoWrap" 
+                            Style="{DynamicResource ListVillesTextStyle}" 
+                            FontSize="16" />
+                        <Label Text="{Binding CodePostale}" 
+                            LineBreakMode="NoWrap"
+                            Style="{DynamicResource ListVillesDetailTextStyle}"
+                            FontSize="13" />
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:VillesViewModel}}, Path=VillesTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView>
+</ContentPage>

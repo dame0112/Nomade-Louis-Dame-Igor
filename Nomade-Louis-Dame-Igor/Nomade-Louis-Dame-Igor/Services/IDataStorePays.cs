@@ -11,5 +11,6 @@ namespace Nomade_Louis_Dame_Igor.Services
         Task<bool> DeletePaysAsync(string id);
         Task<P> GetPaysAsync(string id);
         Task<IEnumerable<P>> GetPayssAsync(bool forceRefresh = false);
+       // Task GetPaysAsync(string paysId);
     }
 }

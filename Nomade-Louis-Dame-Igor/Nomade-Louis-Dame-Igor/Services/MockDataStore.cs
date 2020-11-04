@@ -14,9 +14,10 @@ namespace Nomade_Louis_Dame_Igor.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "premier pays test", Description="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "deuxieme pays test", Description="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "troisieme pays test", Description="ceci est un pays." },
+               
              
             };
         }
@@ -53,6 +54,16 @@ namespace Nomade_Louis_Dame_Igor.Services
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
+        }
+
+        public Task GetVillesAsync(string villesId)
+        {
+            throw new NotImplementedException();
+        }
+
+        public Task GetVillesAsync(bool v)
+        {
+            throw new NotImplementedException();
         }
     }
 }

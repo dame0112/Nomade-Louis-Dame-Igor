@@ -36,9 +36,9 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
             try
             {
-                Villes.Clear();
+                villes.Clear();
                 var Villes = await DataStore.GetVillesAsync(true);
-                foreach (var Villes in Villes)
+                foreach (var villes in Villes)
                 {
                     Villes.Add(Villes);
                 }

@@ -12,5 +12,6 @@ namespace Nomade_Louis_Dame_Igor.Services
         Task<T> GetPaysAsync(string id);
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
         Task GetVillesAsync(string villesId);
+        Task GetVillesAsync(bool v);
     }
 }
