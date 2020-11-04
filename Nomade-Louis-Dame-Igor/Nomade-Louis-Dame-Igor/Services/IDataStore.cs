@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Nomade_Louis_Dame_Igor.Models;
+using System;
 using System.Collections.Generic;
 using System.Threading.Tasks;
 
@@ -13,5 +14,7 @@ namespace Nomade_Louis_Dame_Igor.Services
         Task<IEnumerable<T>> GetItemsAsync(bool forceRefresh = false);
         Task GetVillesAsync(string villesId);
         Task GetVillesAsync(bool v);
+        Task AddItemAsync(Pays newPays);
+        Task AddVillesAsync(Villes newVilles);
     }
 }

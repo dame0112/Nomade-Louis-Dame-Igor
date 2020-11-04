@@ -16,7 +16,7 @@ namespace Nomade_Louis_Dame_Igor.Views
         public NewVillesPage()
         {
             InitializeComponent();
-            BindingContext = new NewItemViewModel();
+            BindingContext = new NewVillesViewModel();
         }
     }
 }
