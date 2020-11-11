@@ -7,7 +7,7 @@
     <StackLayout Spacing="20" Padding="15">
         <Label Text="Villes:" FontSize="Medium" />
         <Label Text="{Binding Nom}" FontSize="Small"/>
-        <Label Text="PAys:" FontSize="Medium" />
+        <Label Text="Pays:" FontSize="Medium" />
         <Label Text="{Binding Id}" FontSize="Small"/>
     </StackLayout>
     

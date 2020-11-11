@@ -14,9 +14,9 @@ namespace Nomade_Louis_Dame_Igor.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "premier pays test", Description="ceci est un pays." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "deuxieme pays test", Description="ceci est un pays." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "troisieme pays test", Description="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Nom = "premier pays test", CodePostale="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Nom = "deuxieme pays test", CodePostale="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Nom = "troisieme pays test", CodePostale="ceci est un pays." },
                
              
             };

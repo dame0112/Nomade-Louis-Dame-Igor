@@ -15,7 +15,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         private Villes _selectedVilles;
 
         public ObservableCollection<Villes> Villes { get; }
-        public Command LoadVillessCommand { get; }
+        public Command LoadVillesCommand { get; }
         public Command AddVillesCommand { get; }
         public Command<Villes> VillesTapped { get; }
 
