@@ -42,7 +42,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         {
             try
             {
-                var Villes = await DataStore.GetVillesAsync(VillesId);
+                var Villes = await DataStoreVilles.GetVillesAsync(VillesId);
                 id = Villes.Id;
                 nom = Villes.Nom;
                 codePostale = Villes.CodePostale;

@@ -25,7 +25,7 @@
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListPaysTextStyle}" 
                             FontSize="16" />
-                        <Label Id="{Binding Id}" 
+                        <Label Text="{Binding Id}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListPaysDetailTextStyle}"
                             FontSize="13" />
