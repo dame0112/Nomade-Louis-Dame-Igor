@@ -43,7 +43,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         {
             try
             {
-                var item = await DataStore.GetPaysAsync(itemId);
+                var item = await DataStore.GetItemAsync(itemId);
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;

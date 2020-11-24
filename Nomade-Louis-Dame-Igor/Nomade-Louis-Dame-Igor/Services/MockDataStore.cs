@@ -7,21 +7,28 @@ using Nomade_Louis_Dame_Igor.Models;
 namespace Nomade_Louis_Dame_Igor.Services
 {
     public class MockDataStore : IDataStore<Item>
+
     {
         readonly List<Item> items;
 
+
+
         public MockDataStore()
+
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Nom = "premier pays test", CodePostale="ceci est un pays." },
-                new Item { Id = Guid.NewGuid().ToString(), Nom = "deuxieme pays test", CodePostale="ceci est un pays." },
-                new Item { Id = Guid.NewGuid().ToString(), Nom = "troisieme pays test", CodePostale="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "premier pays test", Description="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "deuxieme pays test", Description="ceci est un pays." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "troisieme pays test", Description="ceci est un pays." },
                
              
             };
         }
-
+        public async Task<Item> GetItemAsync(string id)
+        {
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        }
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);

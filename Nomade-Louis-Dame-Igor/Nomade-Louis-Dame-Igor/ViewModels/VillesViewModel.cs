@@ -36,11 +36,11 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
             try
             {
-                villes.Clear();
-                var Villes = await DataStore.GetVillesAsync(true);
-                foreach (var villes in Villes)
+                Villes.Clear();
+                var villes = await DataStoreVilles.GetVillesAsync(true);
+                foreach (var ville in Villes)
                 {
-                    Villes.Add(Villes);
+                    Villes.Add(ville);
                 }
             }
             catch (Exception ex)

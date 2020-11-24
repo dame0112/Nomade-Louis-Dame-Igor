@@ -4,12 +4,12 @@ using Nomade_Louis_Dame_Igor.ViewModels;
 
 namespace Nomade_Louis_Dame_Igor.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class VillesDetailPage : ContentPage
     {
-        public ItemDetailPage()
+        public VillesDetailPage()
         {
             InitializeComponent();
-            BindingContext = new ItemDetailViewModel();
+            BindingContext = new VillesDetailViewModel();
         }
     }
 }

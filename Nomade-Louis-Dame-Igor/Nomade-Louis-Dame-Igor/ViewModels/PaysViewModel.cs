@@ -37,10 +37,10 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             try
             {
                 Pays.Clear();
-                var Pays = await DataStore.GetPaysAsync(true);
-                foreach (var Pays in Pays)
+                var pays = await DataStorePays.GetPayssAsync(true);
+                foreach (var PAYS in Pays)
                 {
-                    Pays.Add(Pays);
+                    Pays.Add(PAYS);
                 }
             }
             catch (Exception ex)

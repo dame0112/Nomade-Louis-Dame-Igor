@@ -9,8 +9,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 {
     public class NewVillesViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
+        private string nom;
+        private string codepostale;
 
         public NewVillesViewModel()
         {
@@ -22,20 +22,20 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return !String.IsNullOrWhiteSpace(nom)
+                && !String.IsNullOrWhiteSpace(codepostale);
         }
 
-        public string Text
+        public string CodePostale
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => codepostale;
+            set => SetProperty(ref codepostale, value);
         }
 
-        public string Description
+        public string Nom
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => nom;
+            set => SetProperty(ref nom, value);
         }
 
         public Command SaveCommand { get; }
@@ -56,7 +56,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
                CodePostale = CodePostale
             };
 
-            await DataStore.AddVillesAsync(newVilles);
+            await DataStoreVilles.AddVillesAsync(newVilles);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
