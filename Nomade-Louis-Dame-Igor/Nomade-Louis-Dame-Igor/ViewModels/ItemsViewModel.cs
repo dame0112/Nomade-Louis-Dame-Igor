@@ -21,7 +21,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         public ItemsViewModel()
         {
-            Title = "Browse";
+            Title = "Liste des Villes";
             Items = new ObservableCollection<Item>();
             LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 

@@ -6,8 +6,6 @@
              Title="New Ville">
     <ContentPage.Content>
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Id" FontSize="Medium" />
-            <Entry Text="{Binding Id, Mode=TwoWay}" FontSize="Medium" />
             <Label Text="Nom" FontSize="Medium" />
             <Editor Text="{Binding Nom, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
             <Label Text="CodePostale" FontSize="Medium" />

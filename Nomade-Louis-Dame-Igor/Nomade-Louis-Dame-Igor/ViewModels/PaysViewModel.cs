@@ -21,7 +21,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         public PaysViewModel()
         {
-            Title = "Browse";
+            Title = "Liste des Pays";
             Pays = new ObservableCollection<Pays>();
             LoadPaysCommand = new Command(async () => await ExecuteLoadPaysCommand());
 
