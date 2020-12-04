@@ -5,10 +5,12 @@
              Title="{Binding Title}">
 
     <StackLayout Spacing="20" Padding="15">
-        <Label Text="Villes:" FontSize="Medium" />
-        <Label Text="{Binding Item}" FontSize="Small"/>
-        <Label Text="Pays:" FontSize="Medium" />
-        <Label Text="{Binding item}" FontSize="Small"/>
+        <Label Text="Nom de la Ville:" FontSize="Medium" />
+        <Label Text="{Binding Text}" FontSize="Medium"/>
+        <Label Text="Description:" FontSize="Medium" />
+        <Label Text="{Binding Description}" FontSize="Medium"/>
+        <Label Text="Commentaire:" FontSize="Medium" />
+        <Label Text="{Binding DescriptionBis}" FontSize="Medium"/>
     </StackLayout>
     
 </ContentPage>

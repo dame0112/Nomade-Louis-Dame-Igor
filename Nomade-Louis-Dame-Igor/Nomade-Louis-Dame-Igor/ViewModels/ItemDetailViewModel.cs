@@ -12,6 +12,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         private string itemId;
         private string text;
         private string description;
+        private string descriptionBis;
         public string Id { get; set; }
 
         public string Text
@@ -25,6 +26,13 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             get => description;
             set => SetProperty(ref description, value);
         }
+
+        public string DescriptionBis
+        {
+            get => descriptionBis;
+            set => SetProperty(ref descriptionBis, value);
+        }
+
 
         public string ItemId
         {
@@ -47,6 +55,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
                 Id = item.Id;
                 Text = item.Text;
                 Description = item.Description;
+                DescriptionBis = item.DescriptionBis;
             }
             catch (Exception)
             {
