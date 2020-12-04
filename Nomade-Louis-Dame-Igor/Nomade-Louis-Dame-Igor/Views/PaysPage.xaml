@@ -25,10 +25,10 @@
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListPaysTextStyle}" 
                             FontSize="16" />
-                        <Label Text="{Binding Id}" 
+                        <!--<Label Text="{Binding Id}" 
                             LineBreakMode="NoWrap"
                             Style="{DynamicResource ListPaysDetailTextStyle}"
-                            FontSize="13" />
+                            FontSize="13" />-->
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"

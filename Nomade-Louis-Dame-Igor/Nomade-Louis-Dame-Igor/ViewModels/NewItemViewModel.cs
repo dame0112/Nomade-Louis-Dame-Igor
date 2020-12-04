@@ -11,6 +11,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     {
         private string text;
         private string description;
+        private string descriptionBis;
 
         public NewItemViewModel()
         {
@@ -23,7 +24,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         private bool ValidateSave()
         {
             return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+                && !String.IsNullOrWhiteSpace(description)
+                && !String.IsNullOrWhiteSpace(descriptionBis);
         }
 
         public string Text
@@ -37,6 +39,13 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             get => description;
             set => SetProperty(ref description, value);
         }
+
+        public string DescriptionBis
+        {
+            get => descriptionBis;
+            set => SetProperty(ref descriptionBis, value);
+        }
+
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
@@ -53,7 +62,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Text = Text,
-                Description = Description
+                Description = Description,
+                DescriptionBis = DescriptionBis
             };
 
             await DataStore.AddItemAsync(newItem);

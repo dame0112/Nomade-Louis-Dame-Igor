@@ -8,5 +8,7 @@ namespace Nomade_Louis_Dame_Igor.Models
         public string Id { get; set; }
         public string Description { get; set; }
 
+        public string DescriptionBis { get; set; }
+
     }
 }

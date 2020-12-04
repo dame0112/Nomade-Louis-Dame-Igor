@@ -6,8 +6,26 @@ using System.Threading.Tasks;
 
 namespace Nomade_Louis_Dame_Igor.Services
 {
-    class MockDataStorePays : IDataStorePays<Pays>
+    public class MockDataStorePays : IDataStorePays<Pays>
     {
+
+        readonly List<Pays> pays;
+
+
+
+        public MockDataStorePays()
+
+        {
+            pays = new List<Pays>()
+            {
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "France"},
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Angleterre"},
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Italie"},
+
+
+            };
+        }
+
         public Task<bool> AddPaysAsync(Pays Pays)
         {
             throw new NotImplementedException();
