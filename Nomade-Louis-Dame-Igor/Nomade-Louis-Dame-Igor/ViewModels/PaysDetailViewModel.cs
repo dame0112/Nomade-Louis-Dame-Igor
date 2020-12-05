@@ -9,15 +9,14 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     [QueryProperty(nameof(PaysId), nameof(PaysId))]
     public class PaysDetailViewModel : BaseViewModel
     {
-        private string Id;
-        private string Nom;
+        private string paysId;
+        private string nom;
        
-        public string id { get; set; }
 
-        public string nom
+        public string Nom
         {
-            get => Nom;
-            set => SetProperty(ref Nom, value);
+            get => nom;
+            set => SetProperty(ref nom, value);
         }
 
       
@@ -26,11 +25,11 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         {
             get
             {
-                return PaysId;
+                return paysId;
             }
             set
             {
-                PaysId = value;
+                paysId = value;
                 LoadPaysId(value);
             }
         }
@@ -39,9 +38,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         {
             try
             {
-                var Pays = await DataStorePays.GetPaysAsync(PaysId);
-                id = Pays.Id;
-                nom = Pays.Nom;
+                var Pays = await DataStorePays.GetItemAsync(PaysId);
+                Nom = Pays.Nom;
                
             }
             catch (Exception)

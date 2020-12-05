@@ -13,7 +13,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     public class BaseViewModel : INotifyPropertyChanged
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
-        public IDataStorePays<Pays> DataStorePays => DependencyService.Get<IDataStorePays<Pays>>();
+        public IDataStore<Pays> DataStorePays => DependencyService.Get<IDataStore<Pays>>();
         public IDataStoreVilles<Villes> DataStoreVilles=> DependencyService.Get<IDataStoreVilles<Villes>>();
 
         bool isBusy = false;

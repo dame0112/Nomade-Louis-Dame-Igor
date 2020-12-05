@@ -56,7 +56,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
                // Id = Id
             };
 
-            await DataStorePays.AddPaysAsync(newPays);
+            await DataStorePays.AddItemAsync(newPays);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");

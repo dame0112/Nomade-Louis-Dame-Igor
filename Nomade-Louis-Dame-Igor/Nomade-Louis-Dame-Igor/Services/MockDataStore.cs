@@ -53,24 +53,10 @@ namespace Nomade_Louis_Dame_Igor.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetPaysAsync(string id)
-        {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
-        }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
         {
             return await Task.FromResult(items);
-        }
-
-        public Task GetVillesAsync(string villesId)
-        {
-            throw new NotImplementedException();
-        }
-
-        public Task GetVillesAsync(bool v)
-        {
-            throw new NotImplementedException();
         }
     }
 }

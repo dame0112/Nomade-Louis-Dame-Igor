@@ -14,6 +14,7 @@ namespace Nomade_Louis_Dame_Igor
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
+            DependencyService.Register<MockDataStorePays>();
             MainPage = new AppShell();
         }
 

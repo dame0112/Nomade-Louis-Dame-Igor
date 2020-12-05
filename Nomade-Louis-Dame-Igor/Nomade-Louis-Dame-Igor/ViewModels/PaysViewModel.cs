@@ -12,35 +12,35 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 {
     public class PaysViewModel : BaseViewModel
     {
-        private Pays _selectedPays;
+        private Pays _selectedItem;
 
-        public ObservableCollection<Pays> Pays { get; }
-        public Command LoadPaysCommand { get; }
-        public Command AddPaysCommand { get; }
-        public Command<Pays> PaysTapped { get; }
+        public ObservableCollection<Pays> Items { get; }
+        public Command LoadItemsCommand { get; }
+        public Command AddItemCommand { get; }
+        public Command<Pays> ItemTapped { get; }
 
         public PaysViewModel()
         {
             Title = "Liste des Pays";
-            Pays = new ObservableCollection<Pays>();
-            LoadPaysCommand = new Command(async () => await ExecuteLoadPaysCommand());
+            Items = new ObservableCollection<Pays>();
+            LoadItemsCommand = new Command(async () => await ExecuteLoadItemsCommand());
 
-            PaysTapped = new Command<Pays>(OnPaysSelected);
+            ItemTapped = new Command<Pays>(OnItemsSelected);
 
-            AddPaysCommand = new Command(OnAddPays);
+            AddItemCommand = new Command(OnAddItems);
         }
 
-        async Task ExecuteLoadPaysCommand()
+        async Task ExecuteLoadItemsCommand()
         {
             IsBusy = true;
 
             try
             {
-                Pays.Clear();
-                var pays = await DataStorePays.GetPayssAsync(true);
-                foreach (var PAYS in Pays)
+                Items.Clear();
+                var pay = await DataStorePays.GetItemsAsync(true);
+                foreach (var Pays in pay)
                 {
-                    Pays.Add(PAYS);
+                    Items.Add(Pays);
                 }
             }
             catch (Exception ex)
@@ -61,26 +61,26 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         public Pays SelectedPays
         {
-            get => _selectedPays;
+            get => _selectedItem;
             set
             {
-                SetProperty(ref _selectedPays, value);
-                OnPaysSelected(value);
+                SetProperty(ref _selectedItem, value);
+                OnItemsSelected(value);
             }
         }
 
-        private async void OnAddPays(object obj)
+        private async void OnAddItems(object obj)
         {
             await Shell.Current.GoToAsync(nameof(NewPaysPage));
         }
 
-        async void OnPaysSelected(Pays Pays)
+        async void OnItemsSelected(Pays item)
         {
-            if (Pays == null)
+            if (item == null)
                 return;
 
             // This will push the PaysDetailPage onto the navigation stack
-            await Shell.Current.GoToAsync($"{nameof(PaysDetailPage)}?{nameof(PaysDetailViewModel.PaysId)}={Pays.Id}");
+            await Shell.Current.GoToAsync($"{nameof(PaysDetailPage)}?{nameof(PaysDetailViewModel.PaysId)}={item.Id}");
         }
     }
 }

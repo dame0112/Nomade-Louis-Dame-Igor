@@ -1,12 +1,13 @@
 ﻿using Nomade_Louis_Dame_Igor.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace Nomade_Louis_Dame_Igor.Services
 {
-    public class MockDataStorePays : IDataStorePays<Pays>
+    public class MockDataStorePays : IDataStore<Pays>
     {
 
         readonly List<Pays> pays;
@@ -18,37 +19,46 @@ namespace Nomade_Louis_Dame_Igor.Services
         {
             pays = new List<Pays>()
             {
-                new Pays { Id = Guid.NewGuid().ToString(), Nom = "France"},
-                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Angleterre"},
-                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Italie"},
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "France" },
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Angleterre" },
+                new Pays { Id = Guid.NewGuid().ToString(), Nom = "Italie" },
 
 
             };
         }
 
-        public Task<bool> AddPaysAsync(Pays Pays)
+        public async Task<bool> AddItemAsync(Pays item)
         {
-            throw new NotImplementedException();
+            pays.Add(item);
+
+            return await Task.FromResult(true);
         }
 
-        public Task<bool> DeletePaysAsync(string id)
+        public async Task<bool> DeleteItemAsync(string id)
         {
-            throw new NotImplementedException();
+            var oldItem = pays.Where((Pays arg) => arg.Id == id).FirstOrDefault();
+            pays.Remove(oldItem);
+
+            return await Task.FromResult(true);
         }
 
-        public Task<Pays> GetPaysAsync(string id)
+        public async Task<Pays> GetItemAsync(string id)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(pays.FirstOrDefault(s => s.Id == id));
         }
 
-        public Task<IEnumerable<Pays>> GetPayssAsync(bool forceRefresh = false)
+        public async Task<IEnumerable<Pays>> GetItemsAsync(bool forceRefresh = false)
         {
-            throw new NotImplementedException();
+            return await Task.FromResult(pays);
         }
 
-        public Task<bool> UpdatePaysAsync(Pays Pays)
+        public async Task<bool> UpdateItemAsync(Pays item)
         {
-            throw new NotImplementedException();
+            var oldItem = pays.Where((Pays arg) => arg.Id == item.Id).FirstOrDefault();
+            pays.Remove(oldItem);
+            pays.Add(item);
+
+            return await Task.FromResult(true);
         }
     }
-}
+    }
