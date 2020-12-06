@@ -21,6 +21,7 @@
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Padding="10" x:DataType="model:Pays">
+                        <Label Text="Nom de Pays: " FontSize="Medium" />
                         <Label Text="{Binding Nom}" 
                             LineBreakMode="NoWrap" 
                             Style="{DynamicResource ListPaysTextStyle}" 
