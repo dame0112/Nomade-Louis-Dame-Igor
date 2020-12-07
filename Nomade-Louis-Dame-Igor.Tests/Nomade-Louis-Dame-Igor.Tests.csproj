@@ -37,6 +37,7 @@
     <Folder Include="Views\PaysDetailPage.xaml\" />
     <Folder Include="Views\PaysPage.xaml\" />
     <Folder Include="Views\VillesDetailPage.xaml\" />
+    <Folder Include="Views\VillesPage.xaml\" />
   </ItemGroup>
 
 </Project>
