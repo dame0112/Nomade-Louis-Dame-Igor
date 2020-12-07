@@ -25,7 +25,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
         [Test]
         public void CanSetAndGetText()
         {
-            var testValue = "TestValue570934495";
+            var testValue = "TestValue";
             _testClass.Text = testValue;
             Assert.That(_testClass.Text, Is.EqualTo(testValue));
         }
@@ -33,9 +33,9 @@ namespace Nomade_Louis_Dame_Igor.Tests
         [Test]
         public void CanSetAndGetId()
         {
-            var testValue = "TestValue1893230939";
-            _testClass.Id = testValue;
-            Assert.That(_testClass.Id, Is.EqualTo(testValue));
+            var test = "Test";
+            _testClass.Id = test;
+            Assert.That(_testClass.Id, Is.EqualTo(test));
         }
 
         [Test]
@@ -46,12 +46,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.That(_testClass.Description, Is.EqualTo(testValue));
         }
 
-        [Test]
-        public void CanSetAndGetDescriptionBis()
-        {
-            var testValue = "Test6";
-            _testClass.DescriptionBis = testValue;
-            Assert.That(_testClass.DescriptionBis, Is.EqualTo(testValue));
-        }
+       
     }
 }

@@ -25,4 +25,18 @@
     </Reference>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="App.xaml\" />
+    <Folder Include="AppShell.xaml\" />
+    <Folder Include="ViewModels\" />
+    <Folder Include="Views\AboutPage.xaml\" />
+    <Folder Include="Views\ItemDetailPage.xaml\" />
+    <Folder Include="Views\ItemsPage.xaml\" />
+    <Folder Include="Views\LoginPage.xaml\" />
+    <Folder Include="Views\NewItemPage.xaml\" />
+    <Folder Include="Views\PaysDetailPage.xaml\" />
+    <Folder Include="Views\PaysPage.xaml\" />
+    <Folder Include="Views\VillesDetailPage.xaml\" />
+  </ItemGroup>
+
 </Project>
