@@ -27,7 +27,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
         [Test]
         public void CanSetAndGetPays()
         {
-            _testClass.CheckProperty(x => x.Pays, new Pays { Id = "08", Nom = "dakar", Villes = new List<Villes>() }, new Pays { Id = "221", Nom = "senegal", Villes = new List<Villes>() });
+            _testClass.that(x => x.Pays, new Pays { Id = "08", Nom = "dakar", Villes = new List<Villes>() }, new Pays { Id = "221", Nom = "senegal", Villes = new List<Villes>() });
         }
     }
 }
