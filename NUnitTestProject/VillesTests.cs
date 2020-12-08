@@ -16,12 +16,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             _testClass = new Villes();
         }
 
-        [Test]
-        public void CanConstruct()
-        {
-            var instance = new Villes();
-            Assert.That(instance, Is.Not.Null);
-        }
+       
 
         [Test]
         public void CanSetAndGetId()

@@ -15,13 +15,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
         }
 
         [Test]
-        public void CanConstruct()
-        {
-            var instance = new Item();
-            Assert.That(instance, Is.Not.Null);
-        }
-
-        [Test]
         public void CanSetAndGetText()
         {
             var testValue = "TestValue";

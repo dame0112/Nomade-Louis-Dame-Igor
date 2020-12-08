@@ -17,12 +17,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             _testClass = new MockDataStore();
         }
 
-        [Test]
-        public void CanConstruct()
-        {
-            var instance = new MockDataStore();
-            Assert.That(instance, Is.Not.Null);
-        }
 
         [Test]
         public async Task CanCallGetItemAsync()
@@ -32,13 +26,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallGetItemAsyncWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.GetItemAsync(value));
-        }
 
         [Test]
         public async Task GetItemAsyncPerformsMapping()
@@ -56,11 +43,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [Test]
-        public void CannotCallAddItemAsyncWithNullItem()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.AddItemAsync(default(Item)));
-        }
+     
 
         [Test]
         public async Task CanCallUpdateItemAsync()
@@ -70,11 +53,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [Test]
-        public void CannotCallUpdateItemAsyncWithNullItem()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.UpdateItemAsync(default(Item)));
-        }
+       
 
         [Test]
         public async Task CanCallDeleteItemAsync()
@@ -83,14 +62,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             var result = await _testClass.DeleteItemAsync(id);
             Assert.Fail("test non reussi");
         }
-
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallDeleteItemAsyncWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.DeleteItemAsync(value));
-        }
+ 
 
         [Test]
         public async Task CanCallGetItemsAsync()

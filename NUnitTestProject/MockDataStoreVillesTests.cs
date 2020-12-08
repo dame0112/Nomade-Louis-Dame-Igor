@@ -18,13 +18,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             _testClass = new MockDataStoreVilles();
         }
 
-        [Test]
-        public void CanConstruct()
-        {
-            var instance = new MockDataStoreVilles();
-            Assert.That(instance, Is.Not.Null);
-        }
-
+ 
         [Test]
         public async Task CanCallAddVillesAsync()
         {
@@ -33,11 +27,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [Test]
-        public void CannotCallAddVillesAsyncWithNullVilles()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.AddVillesAsync(default(Villes)));
-        }
 
         [Test]
         public async Task CanCallDeleteVillesAsync()
@@ -47,13 +36,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallDeleteVillesAsyncWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.DeleteVillesAsync(value));
-        }
+      
 
         [Test]
         public async Task CanCallGetVillesAsyncWithString()
@@ -62,14 +45,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
             var result = await _testClass.GetVillesAsync(id);
             Assert.Fail("test non reussi");
         }
-
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallGetVillesAsyncWithStringWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.GetVillesAsync(value));
-        }
+  
 
         [Test]
         public async Task GetVillesAsyncWithStringPerformsMapping()
@@ -95,10 +71,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [Test]
-        public void CannotCallUpdateVillesAsyncWithNullVilles()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.UpdateVillesAsync(default(Villes)));
-        }
+       
     }
 }

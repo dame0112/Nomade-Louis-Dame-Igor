@@ -18,12 +18,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             _testClass = new MockDataStorePays();
         }
 
-        [Test]
-        public void CanConstruct()
-        {
-            var instance = new MockDataStorePays();
-            Assert.That(instance, Is.Not.Null);
-        }
 
         [Test]
         public async Task CanCallAddItemAsync()
@@ -34,12 +28,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
         }
 
         [Test]
-        public void CannotCallAddItemAsyncWithNullItem()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.AddItemAsync(default(Pays)));
-        }
-
-        [Test]
         public async Task CanCallDeleteItemAsync()
         {
             var id = "02";
@@ -47,13 +35,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallDeleteItemAsyncWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.DeleteItemAsync(value));
-        }
 
         [Test]
         public async Task CanCallGetItemAsync()
@@ -63,13 +44,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.Fail("test non reussi");
         }
 
-        [TestCase(null)]
-        [TestCase("")]
-        [TestCase("   ")]
-        public void CannotCallGetItemAsyncWithInvalidId(string value)
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.GetItemAsync(value));
-        }
 
         [Test]
         public async Task GetItemAsyncPerformsMapping()
@@ -94,11 +68,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             var result = await _testClass.UpdateItemAsync(item);
             Assert.Fail("test non reussi");
         }
-
-        [Test]
-        public void CannotCallUpdateItemAsyncWithNullItem()
-        {
-            Assert.ThrowsAsync<ArgumentNullException>(() => _testClass.UpdateItemAsync(default(Pays)));
-        }
+      
     }
 }

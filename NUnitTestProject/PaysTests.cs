@@ -16,12 +16,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             _testClass = new Pays();
         }
 
-        [Test]
-        public void CanConstruct()
-        {
-            var instance = new Pays();
-            Assert.That(instance, Is.Not.Null);
-        }
 
         [Test]
         public void CanSetAndGetId()
