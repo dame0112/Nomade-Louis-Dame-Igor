@@ -1,9 +1,8 @@
+using Nomade_Louis_Dame_Igor.Models;
+using NUnit.Framework;
+
 namespace Nomade_Louis_Dame_Igor.Tests
 {
-    using Nomade_Louis_Dame_Igor.Models;
-    using System;
-    using NUnit.Framework;
-
     [TestFixture]
     public class ItemTests
     {
