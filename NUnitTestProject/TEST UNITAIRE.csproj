@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -13,9 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Nomade-Louis-Dame-Igor.Tests\Nomade-Louis-Dame-Igor.Tests.csproj" />
-    <ProjectReference Include="..\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.Android\Nomade-Louis-Dame-Igor.Android.csproj" />
-    <ProjectReference Include="..\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.iOS\Nomade-Louis-Dame-Igor.iOS.csproj" />
     <ProjectReference Include="..\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.csproj" />
   </ItemGroup>
 
