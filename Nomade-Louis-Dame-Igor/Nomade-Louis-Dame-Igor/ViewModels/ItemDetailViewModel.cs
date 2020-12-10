@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Threading.Tasks;
 using Nomade_Louis_Dame_Igor.Models;
+using Nomade_Louis_Dame_Igor.Services;
 using Xamarin.Forms;
 
 namespace Nomade_Louis_Dame_Igor.ViewModels
@@ -13,6 +14,9 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         private string text;
         private string description;
         private string descriptionBis;
+        private string temperature;
+        RestService _Rs = new RestService();
+        WeatherData _Wd = new WeatherData();
         public string Id { get; set; }
 
         public string Text
@@ -47,6 +51,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             }
         }
 
+        public string Temperature { get => temperature; set => SetProperty(ref temperature, value); }
+
         public async void LoadItemId(string itemId)
         {
             try
@@ -56,6 +62,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
                 Text = item.Text;
                 Description = item.Description;
                 DescriptionBis = item.DescriptionBis;
+                _Wd = await _Rs.OnGetWeatherButtonClicked(Text);
+                Temperature = _Wd.Main.Temperature.ToString();
             }
             catch (Exception)
             {

@@ -11,17 +11,17 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\VillesDetailPage.xaml.cs">
-      <DependentUpon>VillesDetailPage.xaml</DependentUpon>
-    </Compile>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\..\..\..\Microsoft\Xamarin\NuGet\newtonsoft.json\11.0.2\lib\netstandard2.0\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+
+  <ItemGroup>
     <Compile Update="Views\PaysDetailPage.xaml.cs">
       <DependentUpon>PaysDetailPage. xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\PaysPage.xaml.cs">
       <DependentUpon>PaysPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Update="Views\VillesPage.xaml.cs">
-      <DependentUpon>VillesPage.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\NewVillesPage.xaml.cs">
       <DependentUpon>NewVillesPage.xaml</DependentUpon>

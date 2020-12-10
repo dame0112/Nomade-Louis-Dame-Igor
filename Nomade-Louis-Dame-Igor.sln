@@ -11,8 +11,6 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nomade-Louis-Dame-Igor", "N
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEST UNITAIRE", "NUnitTestProject\TEST UNITAIRE.csproj", "{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WeatherApp", "..\..\Users\niass\OneDrive\Bureau\cours b2\C#\projet nomade\Weather\WeatherApp\WeatherApp.csproj", "{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -89,18 +87,6 @@ Global
 		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhone.Build.0 = Release|Any CPU
 		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|iPhone.ActiveCfg = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|iPhone.Build.0 = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|iPhone.ActiveCfg = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|iPhone.Build.0 = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
-		{EB985D5C-F2E1-4BDF-81C4-01108D39B3D2}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
