@@ -16,7 +16,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         public ObservableCollection<Pays> Items { get; }
         public Command LoadItemsCommand { get; }
-        public Command AddItemCommand { get; }
+        public Command AddPaysCommand { get; }
         public Command<Pays> ItemTapped { get; }
 
         public PaysViewModel()
@@ -27,7 +27,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
             ItemTapped = new Command<Pays>(OnItemsSelected);
 
-            AddItemCommand = new Command(OnAddItems);
+            AddPaysCommand = new Command(OnAddItems);
         }
 
         async Task ExecuteLoadItemsCommand()

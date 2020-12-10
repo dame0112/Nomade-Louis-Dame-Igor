@@ -18,9 +18,9 @@ namespace Nomade_Louis_Dame_Igor.Services
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Grenoble", Description="Isère", DescriptionBis ="C'est le 38 bébé" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Londres", Description="Capitale de l'Angleterre", DescriptionBis ="Frank Lampard" },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome", Description="Capitale de l'Italie", DescriptionBis = "Francesco Totti" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Grenoble", Description="Isère", DescriptionBis ="Téléphérique" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Londres", Description="Capitale de l'Angleterre", DescriptionBis ="Big Ben" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome", Description="Capitale de l'Italie", DescriptionBis = "Le Colisée" },
                
              
             };

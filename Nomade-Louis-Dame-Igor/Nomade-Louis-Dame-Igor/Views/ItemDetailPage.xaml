@@ -11,7 +11,7 @@
         <Label Text="{Binding Description}" FontSize="Medium"/>
         <Label Text="Commentaire:" FontSize="Medium" />
         <Label Text="{Binding DescriptionBis}" FontSize="Medium"/>
-        <Label Text="Nom de la Ville:" FontSize="Medium" />
+        <Label Text="Temperature (F°) :" FontSize="Medium" />
         <Label Text="{Binding Temperature}" FontSize="Medium"/>
     </StackLayout>
     

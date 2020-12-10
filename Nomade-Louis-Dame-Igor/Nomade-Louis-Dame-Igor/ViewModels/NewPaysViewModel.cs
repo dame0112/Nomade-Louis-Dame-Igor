@@ -9,8 +9,8 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 {
     public class NewPaysViewModel : BaseViewModel
     {
-        private string Nom;
-        private string Id;
+        private string nom;
+        private string id;
 
         public NewPaysViewModel()
         {
@@ -22,20 +22,20 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(Nom)
-                && !String.IsNullOrWhiteSpace(Id);
+            return !String.IsNullOrWhiteSpace(nom)
+                && !String.IsNullOrWhiteSpace(id);
         }
 
-        public string nom
+        public string Nom
         {
-            get => Nom;
-            set => SetProperty(ref Nom, value);
+            get => nom;
+            set => SetProperty(ref nom, value);
         }
 
-        public string id
+        public string Id
         {
-            get => Id;
-            set => SetProperty(ref Id, value);
+            get => id;
+            set => SetProperty(ref id, value);
         }
 
         public Command SaveCommand { get; }
@@ -52,7 +52,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
            Pays newPays = new Pays()
             {
                 Id = Guid.NewGuid().ToString(),
-                Nom = Nom,
+                Nom = Nom
                // Id = Id
             };
 
