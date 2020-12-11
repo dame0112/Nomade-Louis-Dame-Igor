@@ -15,6 +15,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         private string description;
         private string descriptionBis;
         private string temperature;
+        private string visibility;
         RestService _Rs = new RestService();
         WeatherData _Wd = new WeatherData();
         public string Id { get; set; }
@@ -52,6 +53,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
         }
 
         public string Temperature { get => temperature; set => SetProperty(ref temperature, value); }
+        public string Visibility { get => visibility; set => SetProperty(ref visibility, value); }
 
         public async void LoadItemId(string itemId)
         {
@@ -64,6 +66,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
                 DescriptionBis = item.DescriptionBis;
                 _Wd = await _Rs.OnGetWeatherButtonClicked(Text);
                 Temperature = _Wd.Main.Temperature.ToString();
+                Visibility = _Wd.Weather[0].Visibility.ToString();
             }
             catch (Exception)
             {

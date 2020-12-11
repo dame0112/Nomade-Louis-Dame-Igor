@@ -8,7 +8,6 @@ namespace Nomade_Louis_Dame_Igor.Models
     {
         public string Id { get; set; }
         public string Nom { get; set; }
-        public List<Villes> Villes { get; set; }
 
     }
 }

@@ -24,9 +24,6 @@
     <Compile Update="Views\PaysPage.xaml.cs">
       <DependentUpon>PaysPage.xaml</DependentUpon>
     </Compile>
-    <Compile Update="Views\NewVillesPage.xaml.cs">
-      <DependentUpon>NewVillesPage.xaml</DependentUpon>
-    </Compile>
     <Compile Update="Views\NewPaysPage.xaml.cs">
       <DependentUpon>NewPaysPage.xaml</DependentUpon>
     </Compile>

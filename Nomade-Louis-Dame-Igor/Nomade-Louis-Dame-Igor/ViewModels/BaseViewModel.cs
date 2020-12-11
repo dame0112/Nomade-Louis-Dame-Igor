@@ -14,7 +14,6 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     {
         public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
         public IDataStore<Pays> DataStorePays => DependencyService.Get<IDataStore<Pays>>();
-        public IDataStoreVilles<Villes> DataStoreVilles=> DependencyService.Get<IDataStoreVilles<Villes>>();
 
         bool isBusy = false;
         public bool IsBusy
