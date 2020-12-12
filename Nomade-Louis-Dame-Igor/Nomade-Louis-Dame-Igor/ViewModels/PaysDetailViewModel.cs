@@ -11,7 +11,9 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     {
         private string paysId;
         private string nom;
-       
+
+        public string Id { get; set; }
+
 
         public string Nom
         {
@@ -39,6 +41,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             try
             {
                 var Pays = await DataStorePays.GetItemAsync(PaysId);
+                Id = Pays.Id;
                 Nom = Pays.Nom;
                
             }

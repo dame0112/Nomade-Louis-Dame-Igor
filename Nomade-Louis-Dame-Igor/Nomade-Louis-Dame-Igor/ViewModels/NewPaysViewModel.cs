@@ -10,7 +10,6 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     public class NewPaysViewModel : BaseViewModel
     {
         private string nom;
-        private string id;
 
         public NewPaysViewModel()
         {
@@ -22,20 +21,13 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(nom)
-                && !String.IsNullOrWhiteSpace(id);
+            return !String.IsNullOrWhiteSpace(Nom);
         }
 
         public string Nom
         {
             get => nom;
             set => SetProperty(ref nom, value);
-        }
-
-        public string Id
-        {
-            get => id;
-            set => SetProperty(ref id, value);
         }
 
         public Command SaveCommand { get; }
@@ -53,7 +45,6 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
             {
                 Id = Guid.NewGuid().ToString(),
                 Nom = Nom
-               // Id = Id
             };
 
             await DataStorePays.AddItemAsync(newPays);
