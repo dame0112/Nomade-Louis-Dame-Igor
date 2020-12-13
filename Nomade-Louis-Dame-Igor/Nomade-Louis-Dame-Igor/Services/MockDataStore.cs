@@ -7,20 +7,28 @@ using Nomade_Louis_Dame_Igor.Models;
 namespace Nomade_Louis_Dame_Igor.Services
 {
     public class MockDataStore : IDataStore<Item>
+
     {
         readonly List<Item> items;
 
+
+
         public MockDataStore()
+
         {
             items = new List<Item>()
             {
-                new Item { Id = Guid.NewGuid().ToString(), Text = "First item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Second item", Description="This is an item description." },
-                new Item { Id = Guid.NewGuid().ToString(), Text = "Third item", Description="This is an item description." },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Grenoble", Description="Isère", DescriptionBis ="Téléphérique" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Londres", Description="Capitale de l'Angleterre", DescriptionBis ="Big Ben" },
+                new Item { Id = Guid.NewGuid().ToString(), Text = "Rome", Description="Capitale de l'Italie", DescriptionBis = "Le Colisée" },
+               
              
             };
         }
-
+        public async Task<Item> GetItemAsync(string id)
+        {
+            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+        }
         public async Task<bool> AddItemAsync(Item item)
         {
             items.Add(item);
@@ -45,9 +53,9 @@ namespace Nomade_Louis_Dame_Igor.Services
             return await Task.FromResult(true);
         }
 
-        public async Task<Item> GetItemAsync(string id)
+        public Task GetItemAsync(bool forceRefresh)
         {
-            return await Task.FromResult(items.FirstOrDefault(s => s.Id == id));
+            throw new NotImplementedException();
         }
 
         public async Task<IEnumerable<Item>> GetItemsAsync(bool forceRefresh = false)
