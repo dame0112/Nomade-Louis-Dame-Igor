@@ -13,6 +13,8 @@ namespace Nomade_Louis_Dame_Igor
             InitializeComponent();
             Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
             Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(PaysDetailPage), typeof(PaysDetailPage));
+            Routing.RegisterRoute(nameof(NewPaysPage), typeof(NewPaysPage));
         }
 
         private async void OnMenuItemClicked(object sender, EventArgs e)

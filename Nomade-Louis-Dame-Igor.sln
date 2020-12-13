@@ -7,7 +7,9 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomade-Louis-Dame-Igor.Andr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomade-Louis-Dame-Igor.iOS", "Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.iOS\Nomade-Louis-Dame-Igor.iOS.csproj", "{75DF5876-89F4-4F4F-B1F2-9384FE385B8D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nomade-Louis-Dame-Igor", "Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.csproj", "{A1558F19-70B2-435B-8C13-7170612BE2DD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Nomade-Louis-Dame-Igor", "Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor\Nomade-Louis-Dame-Igor.csproj", "{A1558F19-70B2-435B-8C13-7170612BE2DD}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TEST UNITAIRE", "NUnitTestProject\TEST UNITAIRE.csproj", "{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -73,6 +75,18 @@ Global
 		{A1558F19-70B2-435B-8C13-7170612BE2DD}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
 		{A1558F19-70B2-435B-8C13-7170612BE2DD}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 		{A1558F19-70B2-435B-8C13-7170612BE2DD}.Release|iPhoneSimulator.Deploy.0 = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|iPhone.ActiveCfg = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|iPhone.Build.0 = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|iPhoneSimulator.ActiveCfg = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Debug|iPhoneSimulator.Build.0 = Debug|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|Any CPU.Build.0 = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhone.ActiveCfg = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhone.Build.0 = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhoneSimulator.ActiveCfg = Release|Any CPU
+		{12157A13-6F18-4AF4-97B7-BAE11E5F4FED}.Release|iPhoneSimulator.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

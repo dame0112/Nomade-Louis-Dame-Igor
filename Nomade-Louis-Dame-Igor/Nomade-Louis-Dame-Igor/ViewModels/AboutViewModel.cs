@@ -9,7 +9,7 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
     {
         public AboutViewModel()
         {
-            Title = "About";
+            Title = "A Propos";
             OpenWebCommand = new Command(async () => await Browser.OpenAsync("https://aka.ms/xamain-quickstart"));
         }
 

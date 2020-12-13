@@ -7,13 +7,11 @@ using Xamarin.Forms;
 
 namespace Nomade_Louis_Dame_Igor.ViewModels
 {
-    public class NewItemViewModel : BaseViewModel
+    public class NewPaysViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
-        private string descriptionBis;
+        private string nom;
 
-        public NewItemViewModel()
+        public NewPaysViewModel()
         {
             SaveCommand = new Command(OnSave, ValidateSave);
             CancelCommand = new Command(OnCancel);
@@ -23,29 +21,14 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description)
-                && !String.IsNullOrWhiteSpace(descriptionBis);
+            return !String.IsNullOrWhiteSpace(Nom);
         }
 
-        public string Text
+        public string Nom
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => nom;
+            set => SetProperty(ref nom, value);
         }
-
-        public string Description
-        {
-            get => description;
-            set => SetProperty(ref description, value);
-        }
-
-        public string DescriptionBis
-        {
-            get => descriptionBis;
-            set => SetProperty(ref descriptionBis, value);
-        }
-
 
         public Command SaveCommand { get; }
         public Command CancelCommand { get; }
@@ -58,15 +41,13 @@ namespace Nomade_Louis_Dame_Igor.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+           Pays newPays = new Pays()
             {
                 Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description,
-                DescriptionBis = DescriptionBis
+                Nom = Nom
             };
 
-            await DataStore.AddItemAsync(newItem);
+            await DataStorePays.AddItemAsync(newPays);
 
             // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
