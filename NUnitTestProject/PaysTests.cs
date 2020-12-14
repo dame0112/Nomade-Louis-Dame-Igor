@@ -33,12 +33,6 @@ namespace Nomade_Louis_Dame_Igor.Tests
             Assert.That(_testClass.Nom, Is.EqualTo(testValue));
         }
 
-        [Test]
-        public void CanSetAndGetVilles()
-        {
-            var testValue = new List<Item>();
-            _testClass.Nom  = testValue;
-            Assert.That(_testClass.Nom, Is.EqualTo(testValue));
-        }
+      
     }
 }

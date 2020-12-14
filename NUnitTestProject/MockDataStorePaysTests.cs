@@ -22,7 +22,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
         [Test]
         public async Task CanCallAddItemAsync()
         {
-            var item = new Pays { Id = "01", Nom = "dame", Villes = new List<Villes>() };
+            var item = new Pays { Id = "01", Nom = "dame", };
             var result = await _testClass.AddItemAsync(item);
             Assert.Fail("test non reussi");
         }
@@ -64,7 +64,7 @@ namespace Nomade_Louis_Dame_Igor.Tests
         [Test]
         public async Task CanCallUpdateItemAsync()
         {
-            var item = new Pays { Id = "38", Nom = "grenoble", Villes = new List<Villes>() };
+            var item = new Pays { Id = "38", Nom = "grenoble" };
             var result = await _testClass.UpdateItemAsync(item);
             Assert.Fail("test non reussi");
         }
